@@ -38,7 +38,7 @@
                             <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Teams" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="My Teams" image="conference_filled-25" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -57,7 +57,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loaded by WorkoutViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3E-9c-xx8">
-                                <rect key="frame" x="196" y="329" width="220" height="17"/>
+                                <rect key="frame" x="190" y="329" width="220" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -72,7 +72,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add Workout" id="erq-1h-vAz"/>
+                    <tabBarItem key="tabBarItem" title="Add Workout" image="weightlift_filled-25" id="erq-1h-vAz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NQ5-3w-llt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,7 +112,7 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Account" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="My Account" image="user_male_circle_filled-25" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -169,7 +169,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="conference_filled-25" width="25" height="25"/>
+        <image name="user_male_circle_filled-25" width="25" height="25"/>
+        <image name="weightlift_filled-25" width="25" height="25"/>
     </resources>
 </document>
