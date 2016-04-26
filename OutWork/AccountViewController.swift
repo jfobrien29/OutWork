@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  AccountViewController.swift
 //  OutWork
 //
 //  Created by Jack O'Brien on 4/26/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class AccountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  TeamsViewController.swift
 //  OutWork
 //
 //  Created by Jack O'Brien on 4/26/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class TeamsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
