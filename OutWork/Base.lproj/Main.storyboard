@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Qpq-oW-XKn">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--My Teams-->
@@ -13,18 +14,18 @@
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="My Teams" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="218" y="279" width="164" height="42"/>
+                                <rect key="frame" x="218" y="255" width="164" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by TeamsViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <rect key="frame" x="196" y="329" width="208" height="17"/>
+                                <rect key="frame" x="196" y="305" width="208" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -42,7 +43,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-682"/>
+            <point key="canvasLocation" x="722" y="-682"/>
         </scene>
         <!--Add Workout-->
         <scene sceneID="YYF-bE-RfA">
@@ -53,30 +54,35 @@
                         <viewControllerLayoutGuide type="bottom" id="Cxz-9O-NdG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="f7B-xk-fAa">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loaded by WorkoutViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3E-9c-xx8">
-                                <rect key="frame" x="190" y="329" width="220" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Add Workout" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="TeY-8h-qXC">
+                                <rect key="frame" x="196" y="255" width="208" height="42"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Add Workout" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="TeY-8h-qXC">
-                                <rect key="frame" x="196" y="279" width="208" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by WorkoutViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3E-9c-xx8">
+                                <rect key="frame" x="190" y="305" width="220" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TeY-8h-qXC" firstAttribute="centerX" secondItem="f7B-xk-fAa" secondAttribute="centerX" id="0nq-oJ-05Z"/>
+                            <constraint firstItem="L3E-9c-xx8" firstAttribute="top" secondItem="TeY-8h-qXC" secondAttribute="bottom" constant="8" symbolic="YES" id="6md-ju-Uv1"/>
+                            <constraint firstItem="L3E-9c-xx8" firstAttribute="centerX" secondItem="TeY-8h-qXC" secondAttribute="centerX" id="KZG-Bk-4CY"/>
+                            <constraint firstItem="TeY-8h-qXC" firstAttribute="centerY" secondItem="f7B-xk-fAa" secondAttribute="centerY" id="Rog-kd-Q2S"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add Workout" image="weightlift_filled-25" id="erq-1h-vAz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NQ5-3w-llt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="0.0"/>
+            <point key="canvasLocation" x="722" y="0.0"/>
         </scene>
         <!--My Account-->
         <scene sceneID="wg7-f3-ORb">
@@ -87,18 +93,18 @@
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="My Account" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="207" y="279" width="187" height="42"/>
+                                <rect key="frame" x="207" y="255" width="187" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="192" y="329" width="216" height="17"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by AccountViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
+                                <rect key="frame" x="190" y="305" width="220" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -116,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="754"/>
+            <point key="canvasLocation" x="722" y="762"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="95z-tG-sYi">
@@ -130,9 +136,93 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jT-Vt-73e">
-                                <rect key="frame" x="276" y="285" width="48" height="30"/>
-                                <state key="normal" title="Sign In">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xue-CZ-acA" userLabel="LogInButton">
+                                <rect key="frame" x="266" y="323" width="69" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="h3y-Ew-AGj"/>
+                                </constraints>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" red="1" green="0.63685943749999996" blue="0.28715672549999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="example@outwork.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bda-w7-nZC" userLabel="EmailField">
+                                <rect key="frame" x="190" y="214" width="221" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="lIE-lL-Cgu"/>
+                                    <constraint firstAttribute="width" constant="221" id="scQ-2P-V8I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SV3-lC-WV1" userLabel="PasswordField">
+                                <rect key="frame" x="190" y="285" width="221" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zO2-sN-Qwn">
+                                <rect key="frame" x="279" y="185" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ohc-fR-MUt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efc-8C-ndl">
+                                <rect key="frame" x="262" y="256" width="76" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="pY8-gy-Uhf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OutWork" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="oOk-vL-6Lc">
+                                <rect key="frame" x="80" y="114" width="441" height="43"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="53"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot your password?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3L-7T-fbz">
+                                <rect key="frame" x="236" y="361" width="129" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="T5y-Az-Gxn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92e-SU-pUT" userLabel="ResetPasswordButton">
+                                <rect key="frame" x="252" y="385" width="96" height="11"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="Vju-S1-9jh"/>
+                                    <constraint firstAttribute="height" constant="11" id="xSb-va-CKH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Reset Password">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If this is your first time using OutWork, sign up here!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwm-NS-B4E">
+                                <rect key="frame" x="156" y="421" width="288" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="pOg-TP-QIl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jT-Vt-73e" userLabel="SignUpButton">
+                                <rect key="frame" x="261" y="444" width="78" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="GW0-5e-cGt"/>
+                                </constraints>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="1" green="0.63685943749999996" blue="0.28715672549999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -140,7 +230,32 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.63685943749585161" blue="0.28715672552354499" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="92e-SU-pUT" firstAttribute="centerX" secondItem="S3L-7T-fbz" secondAttribute="centerX" id="3Bo-az-oZh"/>
+                            <constraint firstItem="S3L-7T-fbz" firstAttribute="centerX" secondItem="Xue-CZ-acA" secondAttribute="centerX" id="ET1-YN-Sxu"/>
+                            <constraint firstItem="6jT-Vt-73e" firstAttribute="top" secondItem="xwm-NS-B4E" secondAttribute="bottom" constant="2" id="Ect-ZP-FmJ"/>
+                            <constraint firstItem="xwm-NS-B4E" firstAttribute="top" secondItem="92e-SU-pUT" secondAttribute="bottom" constant="25" id="KLZ-Nf-N5r"/>
+                            <constraint firstItem="bda-w7-nZC" firstAttribute="top" secondItem="zO2-sN-Qwn" secondAttribute="bottom" constant="8" symbolic="YES" id="KaS-7V-hvB"/>
+                            <constraint firstItem="efc-8C-ndl" firstAttribute="top" secondItem="bda-w7-nZC" secondAttribute="bottom" constant="12" id="MtU-MT-zWf"/>
+                            <constraint firstItem="efc-8C-ndl" firstAttribute="centerX" secondItem="SV3-lC-WV1" secondAttribute="centerX" id="OKz-hl-9DH"/>
+                            <constraint firstItem="zO2-sN-Qwn" firstAttribute="centerX" secondItem="bda-w7-nZC" secondAttribute="centerX" id="Vw1-Fr-9qw"/>
+                            <constraint firstItem="Xue-CZ-acA" firstAttribute="top" secondItem="SV3-lC-WV1" secondAttribute="bottom" constant="8" symbolic="YES" id="YwD-gf-uiY"/>
+                            <constraint firstItem="zO2-sN-Qwn" firstAttribute="centerX" secondItem="g73-MC-NNt" secondAttribute="centerX" id="aZo-4A-Wyl"/>
+                            <constraint firstItem="6jT-Vt-73e" firstAttribute="centerX" secondItem="xwm-NS-B4E" secondAttribute="centerX" id="asc-77-oV6"/>
+                            <constraint firstItem="SV3-lC-WV1" firstAttribute="centerY" secondItem="g73-MC-NNt" secondAttribute="centerY" id="b7w-ke-pmN"/>
+                            <constraint firstItem="92e-SU-pUT" firstAttribute="centerX" secondItem="xwm-NS-B4E" secondAttribute="centerX" id="bsk-Lq-e8d"/>
+                            <constraint firstItem="92e-SU-pUT" firstAttribute="top" secondItem="S3L-7T-fbz" secondAttribute="bottom" constant="3" id="fQt-2G-3Z8"/>
+                            <constraint firstItem="bda-w7-nZC" firstAttribute="trailing" secondItem="SV3-lC-WV1" secondAttribute="trailing" id="flM-fl-Pj9"/>
+                            <constraint firstItem="SV3-lC-WV1" firstAttribute="leading" secondItem="bda-w7-nZC" secondAttribute="leading" id="fne-ws-qwH"/>
+                            <constraint firstItem="oOk-vL-6Lc" firstAttribute="top" secondItem="GE2-ge-HzK" secondAttribute="bottom" constant="94" id="ifF-Wp-3h6"/>
+                            <constraint firstItem="S3L-7T-fbz" firstAttribute="top" secondItem="Xue-CZ-acA" secondAttribute="bottom" constant="8" symbolic="YES" id="kst-6G-ckb"/>
+                            <constraint firstItem="oOk-vL-6Lc" firstAttribute="centerX" secondItem="zO2-sN-Qwn" secondAttribute="centerX" id="m3h-uh-j81"/>
+                            <constraint firstItem="oOk-vL-6Lc" firstAttribute="leading" secondItem="g73-MC-NNt" secondAttribute="leadingMargin" constant="64" id="mIS-5I-U58"/>
+                            <constraint firstItem="zO2-sN-Qwn" firstAttribute="top" secondItem="oOk-vL-6Lc" secondAttribute="bottom" constant="28" id="pJx-dF-Fkn"/>
+                            <constraint firstItem="SV3-lC-WV1" firstAttribute="top" secondItem="efc-8C-ndl" secondAttribute="bottom" constant="8" symbolic="YES" id="u6v-h2-OOu"/>
+                            <constraint firstItem="SV3-lC-WV1" firstAttribute="centerX" secondItem="Xue-CZ-acA" secondAttribute="centerX" id="vMP-iV-nqn"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i2Z-WR-4KQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -152,10 +267,18 @@
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                    <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" barStyle="black" translucent="NO" selectionIndicatorImage="conference_filled-25" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="1" green="0.63685943749999996" blue="0.28715672549999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
@@ -173,4 +296,5 @@
         <image name="user_male_circle_filled-25" width="25" height="25"/>
         <image name="weightlift_filled-25" width="25" height="25"/>
     </resources>
+    <color key="tintColor" red="1" green="0.63685943749999996" blue="0.28715672549999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>
