@@ -1,5 +1,5 @@
 //
-//  SignInViewController.swift
+//  WorkoutViewController.swift
 //  OutWork
 //
 //  Created by Jack O'Brien on 4/26/16.
@@ -7,17 +7,12 @@
 //
 
 import UIKit
-import Firebase
 
-class SignInViewController: UIViewController {
+class WorkoutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Create a reference to a Firebase location
-        var myRootRef = Firebase(url:"https://outwork.firebaseio.com")
-        // Write data to Firebase
-        myRootRef.setValue("Do you have data? You'll love Firebase. Please Work!")
+        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
@@ -27,4 +22,3 @@ class SignInViewController: UIViewController {
     
     
 }
-
