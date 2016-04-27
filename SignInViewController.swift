@@ -56,12 +56,12 @@ class SignInViewController: UIViewController {
             withValueCompletionBlock: { error, result in
                 if error != nil {
                     // Error Occured
-                    println("Error Creating account")
+                    //println("Error Creating account")
                     
                 } else {
                     // Successful Creation
                     let uid = result["uid"] as? String
-                    println("Successfully created user account with uid: \(uid)")
+                    //println("Successfully created user account with uid: \(uid)")
                 }
         })
     }
