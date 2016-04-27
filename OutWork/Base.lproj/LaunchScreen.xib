@@ -17,29 +17,29 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Out work your competition" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zp3-Pd-Bu7">
-                    <rect key="frame" x="138" y="269" width="205" height="21"/>
+                    <rect key="frame" x="138" y="195" width="205" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Out work your team" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daV-Dj-akC">
-                    <rect key="frame" x="164" y="298" width="152" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Out work yourself" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZN-DF-7TP">
-                    <rect key="frame" x="172" y="327" width="136" height="21"/>
+                    <rect key="frame" x="164" y="224" width="152" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OutWork" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                    <rect key="frame" x="20" y="218" width="441" height="43"/>
+                    <rect key="frame" x="20" y="144" width="441" height="43"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="43" id="BJK-2x-1PK"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="53"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Out work yourself" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZN-DF-7TP">
+                    <rect key="frame" x="172" y="253" width="136" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -49,7 +49,7 @@
                 <constraint firstItem="kId-c2-rCX" firstAttribute="trailing" secondItem="8ie-xW-0ye" secondAttribute="trailing" id="8vH-yu-r2t"/>
                 <constraint firstItem="daV-Dj-akC" firstAttribute="top" secondItem="zp3-Pd-Bu7" secondAttribute="bottom" constant="8" symbolic="YES" id="NAx-Ej-hKt"/>
                 <constraint firstItem="OZN-DF-7TP" firstAttribute="top" secondItem="daV-Dj-akC" secondAttribute="bottom" constant="8" symbolic="YES" id="Pc3-A2-4xk"/>
-                <constraint firstItem="8ie-xW-0ye" firstAttribute="top" secondItem="OZN-DF-7TP" secondAttribute="bottom" constant="91" id="RIl-Te-YtI"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="top" secondItem="OZN-DF-7TP" secondAttribute="bottom" constant="165" id="RIl-Te-YtI"/>
                 <constraint firstItem="kId-c2-rCX" firstAttribute="centerX" secondItem="zp3-Pd-Bu7" secondAttribute="centerX" id="XaO-24-ELa"/>
                 <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="dt5-2d-wLu"/>
                 <constraint firstItem="OZN-DF-7TP" firstAttribute="centerX" secondItem="daV-Dj-akC" secondAttribute="centerX" id="rds-sP-tsZ"/>
