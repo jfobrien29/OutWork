@@ -19,7 +19,6 @@ class WorkoutViewController: UIViewController {
     @IBOutlet weak var TimeSlider: UISlider!
     @IBOutlet weak var TimeLabel: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -33,6 +32,8 @@ class WorkoutViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //MARK: Actions
     
     //Calls this function when the tap is recognized.
     func dismissKeyboard() {
