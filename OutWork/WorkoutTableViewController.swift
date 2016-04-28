@@ -11,6 +11,7 @@ import UIKit
 class WorkoutTableViewController: UITableViewController {
     
     var workouts = [Workout]()
+    let exercises = ["Upper Body Lift", "Lower Body Lift", "Agilities", "Conditioning", "Skill Training", "Group Workout"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,12 +21,13 @@ class WorkoutTableViewController: UITableViewController {
     }
     
     func loadSampleWorkouts() {
-        var sampleExercises = [Bool]()
-        sampleExercises += [true, true, false, true, false, false, false]
+        var sampleExercises = [true, true, false, true, false, false, false]
         
         let workout1 = Workout(date: "April 4th", time: "4:00pm", duration: 2.1, comment: "N/A", exercises: sampleExercises)
         
         let workout2 = Workout(date: "April 5th", time: "3:00pm", duration: 3, comment: "N/A", exercises: sampleExercises)
+        
+        sampleExercises[6] = true
         
         let workout3 = Workout(date: "April 6th", time: "2:50pm", duration: 4, comment: "N/A", exercises: sampleExercises)
         
@@ -40,26 +42,39 @@ class WorkoutTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
+
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
+
         // Return the number of rows in the section.
-        return 0
+        return workouts.count
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
-
-        // Configure the cell...
-
+        let cellIdentifier = "WorkoutTableViewCell"
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! WorkoutTableViewCell
+        
+        let workout = workouts[indexPath.row]
+        
+        cell.DateLabel.text = "\(workout.date) at \(workout.time)"
+        cell.DurationLabel.text = "Duration: \(workout.duration)"
+        
+        // Set Exercises
+        var exerciseText = "Exercises: "
+        for i in 1...6 {
+            if workout.exercises[i] {
+                exerciseText += ", " + exercises[i]
+            }
+        }
+        
+        cell.ExercisesLabel.text = exerciseText
+        
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
