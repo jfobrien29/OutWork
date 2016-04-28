@@ -88,6 +88,21 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let workout = workouts[indexPath.row]
+        
+        var message = "This is a test, you clicked the \(indexPath.row) row."
+        
+        let alertController = UIAlertController(title: "Workout Summary", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+        
+        
+    }
+    
     
 
     
