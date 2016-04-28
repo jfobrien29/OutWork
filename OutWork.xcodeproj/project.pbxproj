@@ -20,6 +20,7 @@
 		47EB6CE91CD13F6600B7C544 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EB6CE81CD13F6600B7C544 /* Workout.swift */; };
 		47EB6CEB1CD1415800B7C544 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EB6CEA1CD1415700B7C544 /* WorkoutTableViewCell.swift */; };
 		B2DC6FC864E21348052A3744 /* Pods_OutWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DCB210F99AF3ACB160C13B /* Pods_OutWork.framework */; };
+		EA1626C21CD1B2AB0054C92C /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1626C11CD1B2AB0054C92C /* TeamTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		47EB6CEA1CD1415700B7C544 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		835A14E980DCC0CEA2490DE4 /* Pods-OutWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-OutWork/Pods-OutWork.release.xcconfig"; sourceTree = "<group>"; };
 		C7BE2B3B67060CADEEB278A6 /* Pods-OutWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OutWork/Pods-OutWork.debug.xcconfig"; sourceTree = "<group>"; };
+		EA1626C11CD1B2AB0054C92C /* TeamTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		47785D121CCF3F06007352E0 /* OutWork */ = {
 			isa = PBXGroup;
 			children = (
+				EA1626C11CD1B2AB0054C92C /* TeamTableViewCell.swift */,
 				47785D371CCF40C3007352E0 /* SignInViewController.swift */,
 				47785D151CCF3F06007352E0 /* AppDelegate.swift */,
 				47785D171CCF3F06007352E0 /* TeamsViewController.swift */,
@@ -311,6 +314,7 @@
 				477D79F71CD1B0AE00EAA531 /* WorkoutTableViewController.swift in Sources */,
 				47785D3A1CCFC2B9007352E0 /* WorkoutViewController.swift in Sources */,
 				47785D161CCF3F06007352E0 /* AppDelegate.swift in Sources */,
+				EA1626C21CD1B2AB0054C92C /* TeamTableViewCell.swift in Sources */,
 				47785D181CCF3F06007352E0 /* TeamsViewController.swift in Sources */,
 				47EB6CEB1CD1415800B7C544 /* WorkoutTableViewCell.swift in Sources */,
 				47EB6CE91CD13F6600B7C544 /* Workout.swift in Sources */,

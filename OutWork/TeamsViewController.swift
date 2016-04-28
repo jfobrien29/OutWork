@@ -10,6 +10,10 @@ import UIKit
 
 class TeamsViewController: UIViewController {
 
+    // MARK: Properties
+    
+    //var teams = [Team]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

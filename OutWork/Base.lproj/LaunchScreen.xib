@@ -32,7 +32,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OutWork Yourself" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZN-DF-7TP">
                     <rect key="frame" x="172" y="258" width="136" height="21"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="136" id="Yv9-ir-YVT"/>
+                        <constraint firstAttribute="width" constant="136" id="bIR-NB-8hY"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -41,24 +41,24 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoMan" translatesAutoresizingMaskIntoConstraints="NO" id="SKi-bU-UlV">
                     <rect key="frame" x="182" y="125" width="116" height="67"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="116" id="ZTW-EH-3Cm"/>
-                        <constraint firstAttribute="height" constant="67" id="fxm-y9-ili"/>
+                        <constraint firstAttribute="height" constant="67" id="iGj-kl-VMG"/>
+                        <constraint firstAttribute="width" constant="116" id="v2n-Bm-urS"/>
                     </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" red="0.94595709799289063" green="0.97635946154535835" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="zp3-Pd-Bu7" firstAttribute="top" secondItem="SKi-bU-UlV" secondAttribute="bottom" constant="8" symbolic="YES" id="47F-tY-ctv"/>
-                <constraint firstItem="SKi-bU-UlV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="768-zb-HLh"/>
-                <constraint firstItem="OZN-DF-7TP" firstAttribute="top" secondItem="daV-Dj-akC" secondAttribute="bottom" constant="8" id="H6f-08-qUY"/>
-                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="HFi-10-gIN"/>
-                <constraint firstItem="SKi-bU-UlV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="125" id="IfH-bl-E8t"/>
-                <constraint firstItem="SKi-bU-UlV" firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="Uwe-7F-MYl"/>
-                <constraint firstItem="zp3-Pd-Bu7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="138" id="cAG-cX-OGu"/>
-                <constraint firstItem="daV-Dj-akC" firstAttribute="centerX" secondItem="OZN-DF-7TP" secondAttribute="centerX" id="dCl-3P-pbj"/>
-                <constraint firstItem="zp3-Pd-Bu7" firstAttribute="centerX" secondItem="daV-Dj-akC" secondAttribute="centerX" id="dNg-kk-Whr"/>
-                <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="rr6-Ol-cKt"/>
-                <constraint firstItem="daV-Dj-akC" firstAttribute="top" secondItem="zp3-Pd-Bu7" secondAttribute="bottom" constant="8" id="xPW-uO-jQy"/>
+                <constraint firstItem="SKi-bU-UlV" firstAttribute="centerX" secondItem="zp3-Pd-Bu7" secondAttribute="centerX" id="40K-KS-GQB"/>
+                <constraint firstItem="zp3-Pd-Bu7" firstAttribute="top" secondItem="SKi-bU-UlV" secondAttribute="bottom" constant="8" symbolic="YES" id="4C7-4F-2Lm"/>
+                <constraint firstItem="SKi-bU-UlV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4t9-PV-HMP"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="C8l-GX-Nf8"/>
+                <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="IuN-VK-eoL"/>
+                <constraint firstItem="zp3-Pd-Bu7" firstAttribute="centerX" secondItem="daV-Dj-akC" secondAttribute="centerX" id="KV9-L6-bCs"/>
+                <constraint firstItem="daV-Dj-akC" firstAttribute="centerX" secondItem="OZN-DF-7TP" secondAttribute="centerX" id="PiK-Bs-yZJ"/>
+                <constraint firstItem="daV-Dj-akC" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="SAd-eo-d7y"/>
+                <constraint firstItem="daV-Dj-akC" firstAttribute="top" secondItem="zp3-Pd-Bu7" secondAttribute="bottom" constant="8" symbolic="YES" id="SNt-2h-hlu"/>
+                <constraint firstItem="OZN-DF-7TP" firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="ayz-DK-Nt5"/>
+                <constraint firstItem="OZN-DF-7TP" firstAttribute="top" secondItem="daV-Dj-akC" secondAttribute="bottom" constant="8" symbolic="YES" id="ib0-jQ-VJV"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
