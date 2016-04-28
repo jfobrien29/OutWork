@@ -11,8 +11,9 @@ import UIKit
 class TeamTableViewCell: UITableViewCell {
 
     // MARK: Properties
-    @IBOutlet weak var nameTeam: UILabel!
-    @IBOutlet weak var nameSport: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var sport: UILabel!
+    @IBOutlet weak var logo: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

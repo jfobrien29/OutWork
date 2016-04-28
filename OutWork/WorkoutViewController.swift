@@ -90,7 +90,7 @@ class WorkoutViewController: UIViewController {
             message = "You must select one exercise and have a duration greater than 0!"
         }
         else {
-            var newLog = Workout(date: "April 28th", time: "2:00pm", duration: TimeSlider.value, comment: SpecificText.text, exercises: exerciseArray)
+            var newLog = Workout(date: "April 28th", time: "2:00pm", duration: TimeSlider.value, comment: SpecificText.text!, exercises: exerciseArray)
             
             // Reset Time Slider
             TimeSlider.value = 1.0
