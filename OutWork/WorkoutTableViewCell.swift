@@ -9,5 +9,21 @@
 import UIKit
 
 class WorkoutTableViewCell: UITableViewCell {
+    
+    // Properties
+    @IBOutlet weak var DateLabel: UILabel!
+    @IBOutlet weak var DurationLabel: UILabel!
+    @IBOutlet weak var ExercisesLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+    override func setSelected(selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
+    }
 
 }

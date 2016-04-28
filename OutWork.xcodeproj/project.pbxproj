@@ -16,6 +16,7 @@
 		47785D2E1CCF3F07007352E0 /* OutWorkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47785D2D1CCF3F07007352E0 /* OutWorkTests.swift */; };
 		47785D381CCF40C3007352E0 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47785D371CCF40C3007352E0 /* SignInViewController.swift */; };
 		47785D3A1CCFC2B9007352E0 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47785D391CCFC2B9007352E0 /* WorkoutViewController.swift */; };
+		477D79F71CD1B0AE00EAA531 /* WorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477D79F61CD1B0AE00EAA531 /* WorkoutTableViewController.swift */; };
 		47EB6CE91CD13F6600B7C544 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EB6CE81CD13F6600B7C544 /* Workout.swift */; };
 		47EB6CEB1CD1415800B7C544 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EB6CEA1CD1415700B7C544 /* WorkoutTableViewCell.swift */; };
 		B2DC6FC864E21348052A3744 /* Pods_OutWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DCB210F99AF3ACB160C13B /* Pods_OutWork.framework */; };
@@ -46,6 +47,7 @@
 		47785D2D1CCF3F07007352E0 /* OutWorkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutWorkTests.swift; sourceTree = "<group>"; };
 		47785D371CCF40C3007352E0 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = ../SignInViewController.swift; sourceTree = "<group>"; };
 		47785D391CCFC2B9007352E0 /* WorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
+		477D79F61CD1B0AE00EAA531 /* WorkoutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewController.swift; sourceTree = "<group>"; };
 		47EB6CE81CD13F6600B7C544 /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		47EB6CEA1CD1415700B7C544 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		835A14E980DCC0CEA2490DE4 /* Pods-OutWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-OutWork/Pods-OutWork.release.xcconfig"; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				47785D191CCF3F06007352E0 /* AccountViewController.swift */,
 				47EB6CE81CD13F6600B7C544 /* Workout.swift */,
 				47EB6CEA1CD1415700B7C544 /* WorkoutTableViewCell.swift */,
+				477D79F61CD1B0AE00EAA531 /* WorkoutTableViewController.swift */,
 				47785D1B1CCF3F07007352E0 /* Main.storyboard */,
 				47785D391CCFC2B9007352E0 /* WorkoutViewController.swift */,
 				47785D1E1CCF3F07007352E0 /* Images.xcassets */,
@@ -305,6 +308,7 @@
 			files = (
 				47785D381CCF40C3007352E0 /* SignInViewController.swift in Sources */,
 				47785D1A1CCF3F06007352E0 /* AccountViewController.swift in Sources */,
+				477D79F71CD1B0AE00EAA531 /* WorkoutTableViewController.swift in Sources */,
 				47785D3A1CCFC2B9007352E0 /* WorkoutViewController.swift in Sources */,
 				47785D161CCF3F06007352E0 /* AppDelegate.swift in Sources */,
 				47785D181CCF3F06007352E0 /* TeamsViewController.swift in Sources */,
