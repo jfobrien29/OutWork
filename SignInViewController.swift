@@ -17,6 +17,9 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var LoginButton: UIButton!
     @IBOutlet weak var ResetPasswordButton: UIButton!
     @IBOutlet weak var SignUpButton: UIButton!
+    @IBOutlet weak var NameSignUp: UITextField!
+    
+    
     
     
     override func viewDidLoad() {
