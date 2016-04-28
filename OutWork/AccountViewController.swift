@@ -14,7 +14,7 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // Holds Workouts
     var workouts = [Workout]()
-    let exercises = ["Upper Body Lift", "Lower Body Lift", "Agilities", "Conditioning", "Skill Training", "Group Workout"]
+    let exercisesArray = ["Upper Body Lift", "Lower Body Lift", "Conditioning", "Agilities",  "Skill Training", "Group Workout"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,14 +71,14 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Set Exercises
         var exerciseText = "Exercises: "
         var first = true
-        for i in 1...5 {
-            if workout.exercises[i] {
+        for i in 1...6 {
+            if workout.exercises[i-1] {
                 if first {
-                    exerciseText += exercises[i]
+                    exerciseText += exercisesArray[i-1]
                     first = false
                 }
                 else {
-                    exerciseText += ", " + exercises[i]
+                    exerciseText += ", " + exercisesArray[i-1]
                 }
             }
         }
