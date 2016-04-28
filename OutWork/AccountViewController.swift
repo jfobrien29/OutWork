@@ -21,9 +21,7 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Do any additional setup after loading the view, typically from a nib.
         
         loadSampleWorkouts()
-        
-        print("Reached this line")
-    }
+        }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -43,7 +41,7 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let workout3 = Workout(date: "April 6th", time: "2:50pm", duration: 4.2, comment: "N/A", exercises: sampleExercises)
         
-        print("workouts loaded")
+        workouts = [workout1, workout2, workout3]
     }
     
     // MARK: - Table view data source
@@ -57,7 +55,6 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         // Return the number of rows in the section.
-        print(workouts.count)
         return workouts.count
     }
     
@@ -87,7 +84,6 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         
         cell.ExercisesLabel.text = exerciseText
-        print(exerciseText)
         
         return cell
     }

@@ -73,7 +73,7 @@ class WorkoutViewController: UIViewController {
             }
         }
         
-        var newLog = Workout(date: "Now", time: "Now", duration: TimeSlider.value, comment: SpecificText.text, exercises: exerciseArray)
+        var newLog = Workout(date: "Now", time: "Now", duration: TimeSlider.value, comment: SpecificText.text!, exercises: exerciseArray)
         
         // Reset Time Slider
         TimeSlider.value = 1.0

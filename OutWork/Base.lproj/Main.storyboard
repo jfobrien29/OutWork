@@ -347,8 +347,8 @@
                                         <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="sectionIndexBackgroundColor" red="1" green="0.63685943749999996" blue="0.28715672549999999" alpha="0.63" colorSpace="calibratedRGB"/>
                                         <prototypes>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorkoutTableViewCell" rowHeight="60" id="QfZ-4n-lVs" customClass="WorkoutTableViewCell" customModule="OutWork" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="22" width="584" height="60"/>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="WorkoutTableViewCell" rowHeight="60" id="QfZ-4n-lVs" customClass="WorkoutTableViewCell" customModule="OutWork" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="584" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QfZ-4n-lVs" id="Mws-xB-i0E">
                                                     <rect key="frame" x="0.0" y="0.0" width="584" height="59"/>
