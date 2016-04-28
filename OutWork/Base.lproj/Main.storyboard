@@ -201,6 +201,9 @@
                                         <state key="normal" title="Log this workout">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="LogButtonClick:" destination="iar-Rw-Fak" eventType="touchUpInside" id="BV4-wj-bcZ"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write specifics on your workout:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eE9-2P-4cS">
                                         <rect key="frame" x="161" y="302" width="279" height="21"/>
@@ -267,6 +270,7 @@
                         <outlet property="GroupTrainingButton" destination="LEU-9m-7lo" id="NBm-zb-WTk"/>
                         <outlet property="LowerBodyLiftButton" destination="riG-oB-xIi" id="3GP-u7-lmi"/>
                         <outlet property="SkillTrainingButton" destination="nqO-dp-o8g" id="Gx2-Hg-d7Z"/>
+                        <outlet property="SpecificText" destination="L8q-8z-Z4q" id="Yfz-uS-idA"/>
                         <outlet property="TimeLabel" destination="QM3-0b-HSN" id="M2j-r8-Y23"/>
                         <outlet property="TimeSlider" destination="z60-zg-uq8" id="XVB-zx-WEq"/>
                         <outlet property="UpperBodyLiftButton" destination="x9T-P3-YpP" id="bCF-du-mMS"/>
@@ -309,15 +313,16 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <tableView clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="foY-Dt-39X">
+                                    <tableView clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="65" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="foY-Dt-39X">
                                         <rect key="frame" x="8" y="204" width="584" height="339"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="339" id="SvH-Fb-7FD"/>
                                         </constraints>
+                                        <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="sectionIndexBackgroundColor" red="1" green="0.63685943749999996" blue="0.28715672549999999" alpha="0.63" colorSpace="calibratedRGB"/>
                                         <prototypes>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorkoutTableViewCell" rowHeight="60" id="QfZ-4n-lVs" customClass="WorkoutTableViewCell" customModule="OutWork" customModuleProvider="target">
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="WorkoutTableViewCell" rowHeight="60" id="QfZ-4n-lVs" customClass="WorkoutTableViewCell" customModule="OutWork" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="584" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QfZ-4n-lVs" id="Mws-xB-i0E">
@@ -354,6 +359,10 @@
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="8rJ-Kc-sve" id="9kS-gD-G5k"/>
+                                            <outlet property="delegate" destination="8rJ-Kc-sve" id="tcj-nq-NQr"/>
+                                        </connections>
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5hL-bl-mId">
                                         <rect key="frame" x="152" y="74" width="297" height="79"/>
@@ -445,7 +454,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="My Account" image="user_male_circle_filled-25" id="cPa-gy-q4n"/>
                     <connections>
-                        <outlet property="WorkoutHistory" destination="foY-Dt-39X" id="bpI-Cn-JTY"/>
+                        <outlet property="WorkoutHistory" destination="foY-Dt-39X" id="hjN-od-1rg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>

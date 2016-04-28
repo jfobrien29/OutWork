@@ -21,9 +21,7 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Do any additional setup after loading the view, typically from a nib.
         
         loadSampleWorkouts()
-        
-        println("Reached this line")
-    }
+        }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -37,15 +35,13 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let workout1 = Workout(date: "April 4th", time: "4:00pm", duration: 2.1, comment: "N/A", exercises: sampleExercises)
         
-        let workout2 = Workout(date: "April 5th", time: "3:00pm", duration: 3, comment: "N/A", exercises: sampleExercises)
+        let workout2 = Workout(date: "April 5th", time: "3:00pm", duration: 3.2, comment: "N/A", exercises: sampleExercises)
         
         sampleExercises[6] = true
         
-        let workout3 = Workout(date: "April 6th", time: "2:50pm", duration: 4, comment: "N/A", exercises: sampleExercises)
+        let workout3 = Workout(date: "April 6th", time: "2:50pm", duration: 4.2, comment: "N/A", exercises: sampleExercises)
         
-        workouts += [workout1, workout2, workout3]
-        
-        println("workouts loaded")
+        workouts = [workout1, workout2, workout3]
     }
     
     // MARK: - Table view data source
@@ -59,7 +55,6 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         // Return the number of rows in the section.
-        println(workouts.count)
         return workouts.count
     }
     
@@ -75,14 +70,20 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         // Set Exercises
         var exerciseText = "Exercises: "
-        for i in 1...6 {
+        var first = true
+        for i in 1...5 {
             if workout.exercises[i] {
-                exerciseText += ", " + exercises[i]
+                if first {
+                    exerciseText += exercises[i]
+                    first = false
+                }
+                else {
+                    exerciseText += ", " + exercises[i]
+                }
             }
         }
         
         cell.ExercisesLabel.text = exerciseText
-        println(exerciseText)
         
         return cell
     }

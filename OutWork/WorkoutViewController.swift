@@ -18,10 +18,15 @@ class WorkoutViewController: UIViewController {
 
     @IBOutlet weak var TimeSlider: UISlider!
     @IBOutlet weak var TimeLabel: UILabel!
+    @IBOutlet weak var SpecificText: UITextField!
+    
+    var exercises = [UIButton]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        exercises = [UpperBodyLiftButton, LowerBodyLiftButton, ConditioningButton, AgilitiesTrainingButton, SkillTrainingButton, GroupTrainingButton]
         
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
@@ -51,5 +56,33 @@ class WorkoutViewController: UIViewController {
     }
     @IBAction func SliderAction(sender: UISlider) {
         TimeLabel.text = NSString(format: "I worked out for: %.1f hours", TimeSlider.value) as String
+    }
+    @IBAction func LogButtonClick(sender: UIButton) {
+        var exerciseArray = [Bool]()
+        
+        exerciseArray += [false]
+        
+        // Find what exercises completed and set to white
+        for b in exercises {
+            if b.backgroundColor != UIColor.whiteColor() {
+                exerciseArray += [true]
+                b.backgroundColor = UIColor.whiteColor()
+            }
+            else {
+                exerciseArray += [false]
+            }
+        }
+        
+        var newLog = Workout(date: "Now", time: "Now", duration: TimeSlider.value, comment: SpecificText.text, exercises: exerciseArray)
+        
+        // Reset Time Slider
+        TimeSlider.value = 1.0
+        
+        let alertController = UIAlertController(title: "Log Successful", message: "You worked out!", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+        
     }
 }
