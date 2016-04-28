@@ -8,7 +8,17 @@
 
 import UIKit
 
-class Workout {
+
+
+struct PropertyKey {
+    static let dateKey = "date"
+    static let timeKey = "time"
+    static let durationKey = "duration"
+    static let commentKey = "comment"
+    static let exercisesKey = "exercises"
+}
+
+class Workout: NSObject, NSCoding {
     // MARK: Properties
     
     var date: String
@@ -16,8 +26,6 @@ class Workout {
     var duration: Float
     var comment: String
     var exercises: [Bool] = [false, false, false, false, false, false, false]
-    
-    
     
     // MARK: Initialization
     
@@ -36,5 +44,22 @@ class Workout {
         }
         */
     }
+    
+    // NOT FINISHED
+    // encode for storage
+    func encodeWithCoder(aCoder: NSCoder) {
+        
+    }
+    
+    // NOT FINISHED
+    // reload from storage
+    required init(coder aDecoder: NSCoder) {
+        self.date = ""
+        self.time = ""
+        self.duration = 1.0
+        self.comment = ""
+        self.exercises = [false]
+    }
+
 }
 
