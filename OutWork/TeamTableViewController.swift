@@ -9,6 +9,8 @@
 import UIKit
 
 class TeamTableViewController: UITableViewController {
+    
+    var teams = [DisplayTeam]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,8 +20,33 @@ class TeamTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        loadSampleTeams()
+        
+        joinOrCreate()
     }
 
+    func loadSampleTeams() {
+        let logo1 = UIImage(named: "Tiger")!
+        let team1 = DisplayTeam(name: "Princeton", sport: "Men's Basketball", logo: logo1)
+        
+        let logo2 = UIImage(named: "Tiger")!
+        let team2 = DisplayTeam(name: "Princeton", sport: "Men's Lacrosse", logo: logo2)
+        
+        teams += [team1, team2]
+    }
+    
+    func joinOrCreate() {
+        let logoJoin = UIImage(named: "Team")!
+        let join = DisplayTeam(name: "Join", sport: "Find your team", logo: logoJoin)
+        
+        let logoCreate = UIImage(named: "Plus")!
+        let create = DisplayTeam(name: "Create", sport: "Create a new team page", logo: logoCreate)
+    
+    
+        teams += [join, create]
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -30,24 +57,28 @@ class TeamTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return teams.count
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
+        
+        let cellIndetifier = "TeamTableViewCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIndetifier, forIndexPath: indexPath) as! TeamTableViewCell
 
-        // Configure the cell...
+        let team = teams[indexPath.row]
+        
+        cell.name.text = team.name
+        cell.sport.text = team.sport
+        cell.logo.image = team.logo
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

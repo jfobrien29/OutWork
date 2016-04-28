@@ -22,7 +22,7 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         loadSampleWorkouts()
         
-        println("Reached this line")
+        print("Reached this line")
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,7 +45,7 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         workouts += [workout1, workout2, workout3]
         
-        println("workouts loaded")
+        print("workouts loaded")
     }
     
     // MARK: - Table view data source
@@ -59,7 +59,7 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         // Return the number of rows in the section.
-        println(workouts.count)
+        print(workouts.count)
         return workouts.count
     }
     
@@ -82,7 +82,7 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         
         cell.ExercisesLabel.text = exerciseText
-        println(exerciseText)
+        print(exerciseText)
         
         return cell
     }
