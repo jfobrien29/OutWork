@@ -37,13 +37,11 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let workout1 = Workout(date: "April 4th", time: "4:00pm", duration: 2.1, comment: "N/A", exercises: sampleExercises)
         
-        let workout2 = Workout(date: "April 5th", time: "3:00pm", duration: 3, comment: "N/A", exercises: sampleExercises)
+        let workout2 = Workout(date: "April 5th", time: "3:00pm", duration: 3.2, comment: "N/A", exercises: sampleExercises)
         
         sampleExercises[6] = true
         
-        let workout3 = Workout(date: "April 6th", time: "2:50pm", duration: 4, comment: "N/A", exercises: sampleExercises)
-        
-        workouts += [workout1, workout2, workout3]
+        let workout3 = Workout(date: "April 6th", time: "2:50pm", duration: 4.2, comment: "N/A", exercises: sampleExercises)
         
         print("workouts loaded")
     }
@@ -75,9 +73,16 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         // Set Exercises
         var exerciseText = "Exercises: "
-        for i in 1...6 {
+        var first = true
+        for i in 1...5 {
             if workout.exercises[i] {
-                exerciseText += ", " + exercises[i]
+                if first {
+                    exerciseText += exercises[i]
+                    first = false
+                }
+                else {
+                    exerciseText += ", " + exercises[i]
+                }
             }
         }
         
