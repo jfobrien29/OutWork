@@ -635,9 +635,9 @@
                         </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
+                        <segue destination="pfn-XH-cVx" kind="relationship" relationship="viewControllers" id="EUA-69-aaq"/>
                         <segue destination="iar-Rw-Fak" kind="relationship" relationship="viewControllers" id="azJ-1n-XDt"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="pfn-XH-cVx" kind="relationship" relationship="viewControllers" id="EUA-69-aaq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
