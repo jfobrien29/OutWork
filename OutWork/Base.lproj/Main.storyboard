@@ -19,26 +19,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="My Teams" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="218" y="255" width="164" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by TeamsViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <rect key="frame" x="196" y="305" width="208" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zd0-he-Gua">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y9L-eq-LuC">
+                                        <rect key="frame" x="8" y="74" width="584" height="477"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="477" id="WhQ-7E-WMm"/>
+                                        </constraints>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="120" id="2uu-fa-Rtu" customClass="TeamTableViewCell" customModule="OutWork" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="584" height="120"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2uu-fa-Rtu" id="vjm-65-GOf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="584" height="119"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tiger" translatesAutoresizingMaskIntoConstraints="NO" id="z5N-Vj-S9S">
+                                                            <rect key="frame" x="0.0" y="0.0" width="111" height="111"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="111" id="szS-DU-hec"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAC-96-BGf">
+                                                            <rect key="frame" x="131" y="29" width="453" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="38" id="rCv-sp-nzq"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sport" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8AV-Sd-I1V">
+                                                            <rect key="frame" x="131" y="59" width="453" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="XAC-96-BGf" firstAttribute="top" secondItem="vjm-65-GOf" secondAttribute="topMargin" constant="9" id="0iT-lf-GWM"/>
+                                                        <constraint firstItem="z5N-Vj-S9S" firstAttribute="leading" secondItem="vjm-65-GOf" secondAttribute="leading" id="1bB-s4-ZWP"/>
+                                                        <constraint firstItem="XAC-96-BGf" firstAttribute="trailing" secondItem="8AV-Sd-I1V" secondAttribute="trailing" id="INg-ZG-236"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="8AV-Sd-I1V" secondAttribute="bottom" constant="9" id="Pjl-dE-tO2"/>
+                                                        <constraint firstItem="z5N-Vj-S9S" firstAttribute="top" secondItem="vjm-65-GOf" secondAttribute="top" id="Uie-Si-ms5"/>
+                                                        <constraint firstItem="XAC-96-BGf" firstAttribute="leading" secondItem="z5N-Vj-S9S" secondAttribute="trailing" constant="20" id="XSu-3m-bk6"/>
+                                                        <constraint firstAttribute="trailing" secondItem="XAC-96-BGf" secondAttribute="trailing" id="aH0-sI-mxm"/>
+                                                        <constraint firstItem="8AV-Sd-I1V" firstAttribute="top" secondItem="XAC-96-BGf" secondAttribute="bottom" constant="8" symbolic="YES" id="cep-q3-IEL"/>
+                                                        <constraint firstItem="z5N-Vj-S9S" firstAttribute="bottom" secondItem="vjm-65-GOf" secondAttribute="bottomMargin" id="gbj-B7-egS"/>
+                                                        <constraint firstItem="XAC-96-BGf" firstAttribute="leading" secondItem="8AV-Sd-I1V" secondAttribute="leading" id="sr3-qW-307"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="nameSport" destination="8AV-Sd-I1V" id="ICy-NS-xHW"/>
+                                                    <outlet property="nameTeam" destination="XAC-96-BGf" id="6Sv-yK-KPz"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="y9L-eq-LuC" firstAttribute="top" secondItem="zd0-he-Gua" secondAttribute="top" constant="74" id="3GY-w0-OL3"/>
+                                    <constraint firstItem="y9L-eq-LuC" firstAttribute="centerX" secondItem="zd0-he-Gua" secondAttribute="centerX" id="Nsf-cW-jml"/>
+                                    <constraint firstItem="y9L-eq-LuC" firstAttribute="leading" secondItem="zd0-he-Gua" secondAttribute="leadingMargin" id="Xqw-Wr-Amp"/>
+                                    <constraint firstAttribute="bottom" secondItem="y9L-eq-LuC" secondAttribute="bottom" id="ksn-HZ-LaM"/>
+                                    <constraint firstItem="y9L-eq-LuC" firstAttribute="trailing" secondItem="zd0-he-Gua" secondAttribute="trailingMargin" id="zx8-5Z-m4u"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstAttribute="trailing" secondItem="zd0-he-Gua" secondAttribute="trailing" id="CvJ-6p-Jy8"/>
+                            <constraint firstItem="zd0-he-Gua" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="GhB-XM-jxY"/>
+                            <constraint firstItem="zd0-he-Gua" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" id="gdr-sd-6SH"/>
+                            <constraint firstItem="zd0-he-Gua" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="yac-37-bvf"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Teams" image="conference_filled-25" id="acW-dT-cKf"/>
@@ -176,12 +231,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="How long did you workout?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0K-BY-nbk">
-                                        <rect key="frame" x="194" y="382" width="212" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="z60-zg-uq8">
                                         <rect key="frame" x="216" y="411" width="169" height="31"/>
                                         <constraints>
@@ -228,6 +277,12 @@
                                             <constraint firstAttribute="width" constant="36" id="hzU-ox-IWB"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="How long did you workout?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0K-BY-nbk">
+                                        <rect key="frame" x="194" y="386" width="212" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -619,6 +674,7 @@
     </scenes>
     <resources>
         <image name="Logo" width="156" height="52"/>
+        <image name="Tiger" width="256" height="256"/>
         <image name="conference_filled-25" width="25" height="25"/>
         <image name="user_male_circle_filled-25" width="25" height="25"/>
         <image name="weightlift_filled-25" width="25" height="25"/>
