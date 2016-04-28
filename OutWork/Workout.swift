@@ -21,7 +21,7 @@ class Workout {
     
     // MARK: Initialization
     
-    init?(date: String, time: String, duration: Float, comment: String, exercises: [Bool]) {
+    init(date: String, time: String, duration: Float, comment: String, exercises: [Bool]) {
         // Initialize stored properties.
         self.date = date
         self.time = time
@@ -29,10 +29,12 @@ class Workout {
         self.comment = comment
         self.exercises = exercises
         
+        /*
         // Initialization should fail if there is no duration or exercises
         if duration == 0 || exercises[0] == false {
             return nil
         }
+        */
     }
 }
 

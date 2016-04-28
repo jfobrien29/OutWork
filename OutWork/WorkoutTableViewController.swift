@@ -9,15 +9,27 @@
 import UIKit
 
 class WorkoutTableViewController: UITableViewController {
+    
+    var workouts = [Workout]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        // Load sample data
+        loadSampleWorkouts()
+    }
+    
+    func loadSampleWorkouts() {
+        var sampleExercises = [Bool]()
+        sampleExercises += [true, true, false, true, false, false, false]
+        
+        let workout1 = Workout(date: "April 4th", time: "4:00pm", duration: 2.1, comment: "N/A", exercises: sampleExercises)
+        
+        let workout2 = Workout(date: "April 5th", time: "3:00pm", duration: 3, comment: "N/A", exercises: sampleExercises)
+        
+        let workout3 = Workout(date: "April 6th", time: "2:50pm", duration: 4, comment: "N/A", exercises: sampleExercises)
+        
+        workouts += [workout1, workout2, workout3]
     }
 
     override func didReceiveMemoryWarning() {
