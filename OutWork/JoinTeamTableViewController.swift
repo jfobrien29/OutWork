@@ -51,7 +51,7 @@ class JoinTeamTableViewController: UITableViewController {
         let team14 = DisplayTeam(name: "Princeton", sport: "Women's Soccer", logo: logo5)
         
         let logo6 = UIImage(named: "SouthCarolina")!
-        let team15 = DisplayTeam(name: "Princeton", sport: "Women's Soccer", logo: logo6)
+        let team15 = DisplayTeam(name: "South Carolina", sport: "Women's Soccer", logo: logo6)
         
         let logo7 = UIImage(named: "Yale")!
         let team16 = DisplayTeam(name: "Yale", sport: "Men's Basketball", logo: logo7)
