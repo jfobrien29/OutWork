@@ -67,6 +67,7 @@ class Workout: NSObject, NSCoding {
         self.exercises = [false]
     }
     
+    // Create a coherent string of workout
     func toString() -> String {
         let durationText = NSString(format: "%.1f", self.duration) as String
         
@@ -87,6 +88,8 @@ class Workout: NSObject, NSCoding {
         }
         
         message += exercisesText
+        
+        message += "\n Specifics: " + comment
         
         return message
     }
