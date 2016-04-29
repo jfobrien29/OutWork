@@ -20,6 +20,8 @@ class JoinTeamTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        loadSampleTeams()
     }
 
     func loadSampleTeams() {
@@ -66,23 +68,28 @@ class JoinTeamTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return teams.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        
+        let cellIndetifier = "TeamTableViewCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIndetifier, forIndexPath: indexPath) as! TeamTableViewCell
+        
+        let team = teams[indexPath.row]
+        
+        cell.name.text = team.name
+        cell.sport.text = team.sport
+        cell.logo.image = team.logo
+        
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
