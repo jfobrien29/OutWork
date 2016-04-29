@@ -11,6 +11,9 @@ import UIKit
 class AccountViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var WorkoutHistory: UITableView!
+    @IBOutlet weak var NameLabel: UILabel!
+    @IBOutlet weak var EmailLabel: UILabel!
+    @IBOutlet weak var DateLabel: UILabel!
     
     var currentUser:OWUser!
     
@@ -23,6 +26,12 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Do any additional setup after loading the view, typically from a nib.
         
         loadSampleWorkouts()
+        
+        /*
+        NameLabel.text = currentUser.name
+        EmailLabel.text = currentUser.email
+        DateLabel.text = currentUser.lastLogged
+        */
         }
 
     override func didReceiveMemoryWarning() {

@@ -27,14 +27,11 @@ class SignInViewController: UIViewController {
         // Create a reference to a Firebase location
         let myRootRef = Firebase(url:"https://outwork.firebaseio.com")
         // Write data to Firebase
-        _ = NSDate()
         myRootRef.setValue(["Sample Data": NSDate().description])
         
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,10 +40,11 @@ class SignInViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "segueSignIn") {
-            let svc = segue.destinationViewController as! TabBarViewController
+        if (segue.identifier == "SignInSegue") {
             
-            svc.currentUser = currentUser
+            var tabBarC: MainTabBarViewController = segue.destinationViewController as! MainTabBarViewController
+            
+            tabBarC.currentUser = currentUser
         }
     }
     
@@ -72,23 +70,28 @@ class SignInViewController: UIViewController {
     @IBAction func pressLogin(sender: UIButton) {
         let ref = Firebase(url: "https://outwork.firebaseio.com/users")
         
-        if EmailSignIn.text!.isEmpty || PasswordSignIn.text!.isEmpty || NameSignUp.text!.isEmpty {
+        if EmailSignIn.text!.isEmpty || PasswordSignIn.text!.isEmpty || NameSignUp.text!.isEmpty
+        {
             self.showAlert("Invalid Login", message: "You must fill out email, password, (and name for now) to login!", button: "dismiss")
         }
-            
-        else {
+        else
+        {
             ref.authUser(EmailSignIn.text, password: PasswordSignIn.text) {
                 error, authData in
                 if error != nil {
                     self.showAlert("Problem Logging In", message: "An error occured logging in, make sure you entered your email and password correctly!", button: "Dismiss")
                 } else {
-                    var uid = authData.uid
                     
+                    self.finishLogin(authData.uid)
                 }
             }
-            
-            currentUser = OWUser(name: NameSignUp.text!, email: EmailSignIn.text!, lastLogged: "Never Logged", UID: "Blah", workoutLog: [])
         }
+    }
+    
+    func finishLogin(uid: String) {
+        currentUser = OWUser(name: self.NameSignUp.text!, email: self.EmailSignIn.text!, lastLogged: "Never Logged", UID:uid, workoutLog: [])
+        
+        self.performSegueWithIdentifier("SignInSegue", sender: nil)
     }
     
     
@@ -125,6 +128,9 @@ class SignInViewController: UIViewController {
         let myRootRef = Firebase(url:"https://outwork.firebaseio.com/users")
         let user = myRootRef.childByAppendingPath("uid")
         user.setValue(currentUser.dict)
+        
+        // Now Login
+        performSegueWithIdentifier("SignInSegue", sender: nil)
     }
     
 }
