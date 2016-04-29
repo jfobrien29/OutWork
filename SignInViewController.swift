@@ -25,9 +25,9 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         
         // Create a reference to a Firebase location
-        var myRootRef = Firebase(url:"https://outwork.firebaseio.com")
+        let myRootRef = Firebase(url:"https://outwork.firebaseio.com")
         // Write data to Firebase
-        var date = NSDate()
+        _ = NSDate()
         myRootRef.setValue(["Sample Data": NSDate().description])
         
         //Looks for single or multiple taps.
@@ -44,7 +44,7 @@ class SignInViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "segueSignIn") {
-            var svc = segue.destinationViewController as! TabBarViewController
+            let svc = segue.destinationViewController as! TabBarViewController
             
             svc.currentUser = currentUser
         }
@@ -70,9 +70,9 @@ class SignInViewController: UIViewController {
     // Below: Actions!
     
     @IBAction func pressLogin(sender: UIButton) {
-        var ref = Firebase(url: "https://outwork.firebaseio.com/users")
+        let ref = Firebase(url: "https://outwork.firebaseio.com/users")
         
-        if EmailSignIn.text.isEmpty || PasswordSignIn.text.isEmpty || NameSignUp.text.isEmpty {
+        if EmailSignIn.text!.isEmpty || PasswordSignIn.text!.isEmpty || NameSignUp.text!.isEmpty {
             self.showAlert("Invalid Login", message: "You must fill out email, password, (and name for now) to login!", button: "dismiss")
         }
             
@@ -87,15 +87,15 @@ class SignInViewController: UIViewController {
                 }
             }
             
-            currentUser = OWUser(name: NameSignUp.text, email: EmailSignIn.text, lastLogged: "Never Logged", UID: "Blah", workoutLog: [])
+            currentUser = OWUser(name: NameSignUp.text!, email: EmailSignIn.text!, lastLogged: "Never Logged", UID: "Blah", workoutLog: [])
         }
     }
     
     
     @IBAction func pressSignUp(sender: UIButton) {
-        var myRootRef = Firebase(url:"https://outwork.firebaseio.com/users")
+        let myRootRef = Firebase(url:"https://outwork.firebaseio.com/users")
         
-        if EmailSignIn.text.isEmpty || PasswordSignIn.text.isEmpty || NameSignUp.text.isEmpty {
+        if EmailSignIn.text!.isEmpty || PasswordSignIn.text!.isEmpty || NameSignUp.text!.isEmpty {
             self.showAlert("Invalid Signup", message: "You must fill out email, password, and name to sign up!", button: "dismiss")
         }
         
@@ -119,11 +119,11 @@ class SignInViewController: UIViewController {
     
     func loginAndCreateAfterSignUp(uid: String) {
         // First Create User
-        currentUser = OWUser(name: NameSignUp.text, email: EmailSignIn.text, lastLogged: "Never Logged", UID: uid, workoutLog: [])
+        currentUser = OWUser(name: NameSignUp.text!, email: EmailSignIn.text!, lastLogged: "Never Logged", UID: uid, workoutLog: [])
         
         // Now Add to Backend
-        var myRootRef = Firebase(url:"https://outwork.firebaseio.com/users")
-        var user = myRootRef.childByAppendingPath("uid")
+        let myRootRef = Firebase(url:"https://outwork.firebaseio.com/users")
+        let user = myRootRef.childByAppendingPath("uid")
         user.setValue(currentUser.dict)
     }
     
