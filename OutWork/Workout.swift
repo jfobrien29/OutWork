@@ -25,7 +25,9 @@ class Workout: NSObject, NSCoding {
     var time: String
     var duration: Float
     var comment: String
-    var exercises: [Bool] = [false, false, false, false, false, false, false]
+    var exercises: [Bool] = [false, false, false, false, false, false]
+    
+    let exercisesArray = ["Upper Body Lift", "Lower Body Lift", "Conditioning", "Agilities",  "Skill Training", "Group Workout"]
     
     // MARK: Initialization
     
@@ -48,7 +50,11 @@ class Workout: NSObject, NSCoding {
     // NOT FINISHED
     // encode for storage
     func encodeWithCoder(aCoder: NSCoder) {
-        
+        aCoder.encodeObject(date, forKey: PropertyKey.dateKey)
+        aCoder.encodeObject(time, forKey: PropertyKey.timeKey)
+        aCoder.encodeFloat(duration, forKey: PropertyKey.durationKey)
+        aCoder.encodeObject(comment, forKey: PropertyKey.commentKey)
+        //aCoder.encode()
     }
     
     // NOT FINISHED
@@ -60,6 +66,29 @@ class Workout: NSObject, NSCoding {
         self.comment = ""
         self.exercises = [false]
     }
-
+    
+    func toString() -> String {
+        var durationText = NSString(format: "%.1f", self.duration) as String
+        
+        var message = "Workout logged for \(self.date) at \(self.time).\n You trained for \(durationText) hours"
+        
+        var exercisesText = " and completed the following exercises:\n"
+        var first = true
+        for i in 0...5 {
+            if self.exercises[i] {
+                if first {
+                    exercisesText += exercisesArray[i]
+                    first = false
+                }
+                else {
+                    exercisesText += "\n" + exercisesArray[i]
+                }
+            }
+        }
+        
+        message += exercisesText
+        
+        return message
+    }
 }
 

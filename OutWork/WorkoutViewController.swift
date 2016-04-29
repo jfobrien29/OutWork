@@ -23,6 +23,8 @@ class WorkoutViewController: UIViewController {
     var exercises = [UIButton]()
     let exercisesArray = ["Upper Body Lift", "Lower Body Lift", "Conditioning", "Agilities",  "Skill Training", "Group Workout"]
     
+    var currentUser:OWUser!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -37,7 +39,6 @@ class WorkoutViewController: UIViewController {
         for b in exercises {
             b.backgroundColor = UIColor.whiteColor()
         }
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -96,25 +97,7 @@ class WorkoutViewController: UIViewController {
             TimeSlider.value = 1.0
             TimeLabel.text = "I worked out for: 1.0 hours"
             
-            var durationText = NSString(format: "%.1f", newLog.duration) as String
-            
-            message = "Workout logged for \(newLog.date) at \(newLog.time).\n You trained for \(durationText) hours"
-            
-            var exercisesText = " and completed the following exercises:\n"
-            var first = true
-            for i in 0...5 {
-                if newLog.exercises[i] {
-                    if first {
-                        exercisesText += exercisesArray[i]
-                        first = false
-                    }
-                    else {
-                        exercisesText += "\n" + exercisesArray[i]
-                    }
-                }
-            }
-            
-            message += exercisesText
+            message = newLog.toString()
             
         }
         

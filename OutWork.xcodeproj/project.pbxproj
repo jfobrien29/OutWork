@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		47014DAE1CD294B8002D1E90 /* OWUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47014DAD1CD294B8002D1E90 /* OWUser.swift */; };
+		47014DB01CD32020002D1E90 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47014DAF1CD32020002D1E90 /* TabBarViewController.swift */; };
 		47785D161CCF3F06007352E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47785D151CCF3F06007352E0 /* AppDelegate.swift */; };
 		47785D1A1CCF3F06007352E0 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47785D191CCF3F06007352E0 /* AccountViewController.swift */; };
 		47785D1D1CCF3F07007352E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47785D1B1CCF3F07007352E0 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		28DCB210F99AF3ACB160C13B /* Pods_OutWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47014DAD1CD294B8002D1E90 /* OWUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWUser.swift; sourceTree = "<group>"; };
+		47014DAF1CD32020002D1E90 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		47785D101CCF3F06007352E0 /* OutWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OutWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47785D141CCF3F06007352E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47785D151CCF3F06007352E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				47014DAD1CD294B8002D1E90 /* OWUser.swift */,
 				47EB6CEA1CD1415700B7C544 /* WorkoutTableViewCell.swift */,
 				47785D1B1CCF3F07007352E0 /* Main.storyboard */,
+				47014DAF1CD32020002D1E90 /* TabBarViewController.swift */,
 				47785D391CCFC2B9007352E0 /* WorkoutViewController.swift */,
 				47785D1E1CCF3F07007352E0 /* Images.xcassets */,
 				47785D201CCF3F07007352E0 /* LaunchScreen.xib */,
@@ -325,6 +328,7 @@
 				47785D1A1CCF3F06007352E0 /* AccountViewController.swift in Sources */,
 				47014DAE1CD294B8002D1E90 /* OWUser.swift in Sources */,
 				477D79F71CD1B0AE00EAA531 /* WorkoutTableViewController.swift in Sources */,
+				47014DB01CD32020002D1E90 /* TabBarViewController.swift in Sources */,
 				47785D3A1CCFC2B9007352E0 /* WorkoutViewController.swift in Sources */,
 				47785D161CCF3F06007352E0 /* AppDelegate.swift in Sources */,
 				EADD6B181CD30E26007385FD /* TeamPageViewController.swift in Sources */,
