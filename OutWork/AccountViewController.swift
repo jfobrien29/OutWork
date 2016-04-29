@@ -12,6 +12,8 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet var WorkoutHistory: UITableView!
     
+    var currentUser:OWUser!
+    
     // Holds Workouts
     var workouts = [Workout]()
     let exercisesArray = ["Upper Body Lift", "Lower Body Lift", "Conditioning", "Agilities",  "Skill Training", "Group Workout"]
@@ -92,7 +94,7 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let workout = workouts[indexPath.row]
         
-        var message = "This is a test, you clicked the \(indexPath.row) row."
+        var message = workout.toString()
         
         let alertController = UIAlertController(title: "Workout Summary", message: message, preferredStyle: UIAlertControllerStyle.Alert)
         
