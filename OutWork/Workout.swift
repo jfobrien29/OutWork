@@ -48,7 +48,11 @@ class Workout: NSObject, NSCoding {
     // NOT FINISHED
     // encode for storage
     func encodeWithCoder(aCoder: NSCoder) {
-        
+        aCoder.encodeObject(date, forKey: PropertyKey.dateKey)
+        aCoder.encodeObject(time, forKey: PropertyKey.timeKey)
+        aCoder.encodeFloat(duration, forKey: PropertyKey.durationKey)
+        aCoder.encodeObject(comment, forKey: PropertyKey.commentKey)
+        //aCoder.encode()
     }
     
     // NOT FINISHED
