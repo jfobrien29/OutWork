@@ -94,7 +94,7 @@ class AccountViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let workout = workouts[indexPath.row]
         
-        var message = workout.toString()
+        let message = workout.toString()
         
         let alertController = UIAlertController(title: "Workout Summary", message: message, preferredStyle: UIAlertControllerStyle.Alert)
         

@@ -24,6 +24,8 @@
 		B2DC6FC864E21348052A3744 /* Pods_OutWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DCB210F99AF3ACB160C13B /* Pods_OutWork.framework */; };
 		EA1626C21CD1B2AB0054C92C /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1626C11CD1B2AB0054C92C /* TeamTableViewCell.swift */; };
 		EA3AE2B11CD1DB5D0039ADBC /* DisplayTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3AE2B01CD1DB5D0039ADBC /* DisplayTeam.swift */; };
+		EADD6B181CD30E26007385FD /* TeamPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADD6B171CD30E26007385FD /* TeamPageViewController.swift */; };
+		EADD6B1C1CD31AC4007385FD /* JoinTeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADD6B1B1CD31AC4007385FD /* JoinTeamTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		C7BE2B3B67060CADEEB278A6 /* Pods-OutWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OutWork/Pods-OutWork.debug.xcconfig"; sourceTree = "<group>"; };
 		EA1626C11CD1B2AB0054C92C /* TeamTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
 		EA3AE2B01CD1DB5D0039ADBC /* DisplayTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayTeam.swift; sourceTree = "<group>"; };
+		EADD6B171CD30E26007385FD /* TeamPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamPageViewController.swift; sourceTree = "<group>"; };
+		EADD6B1B1CD31AC4007385FD /* JoinTeamTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinTeamTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 		47785D121CCF3F06007352E0 /* OutWork */ = {
 			isa = PBXGroup;
 			children = (
+				EADD6B1B1CD31AC4007385FD /* JoinTeamTableViewController.swift */,
+				EADD6B171CD30E26007385FD /* TeamPageViewController.swift */,
 				477D79FC1CD1D44B00EAA531 /* TeamTableViewController.swift */,
 				EA3AE2B01CD1DB5D0039ADBC /* DisplayTeam.swift */,
 				EA1626C11CD1B2AB0054C92C /* TeamTableViewCell.swift */,
@@ -325,7 +331,9 @@
 				47014DB01CD32020002D1E90 /* TabBarViewController.swift in Sources */,
 				47785D3A1CCFC2B9007352E0 /* WorkoutViewController.swift in Sources */,
 				47785D161CCF3F06007352E0 /* AppDelegate.swift in Sources */,
+				EADD6B181CD30E26007385FD /* TeamPageViewController.swift in Sources */,
 				EA3AE2B11CD1DB5D0039ADBC /* DisplayTeam.swift in Sources */,
+				EADD6B1C1CD31AC4007385FD /* JoinTeamTableViewController.swift in Sources */,
 				477D79FD1CD1D44B00EAA531 /* TeamTableViewController.swift in Sources */,
 				EA1626C21CD1B2AB0054C92C /* TeamTableViewCell.swift in Sources */,
 				47EB6CEB1CD1415800B7C544 /* WorkoutTableViewCell.swift in Sources */,

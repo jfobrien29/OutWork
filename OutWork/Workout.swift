@@ -69,7 +69,7 @@ class Workout: NSObject, NSCoding {
     
     // Create a coherent string of workout
     func toString() -> String {
-        var durationText = NSString(format: "%.1f", self.duration) as String
+        let durationText = NSString(format: "%.1f", self.duration) as String
         
         var message = "Workout logged for \(self.date) at \(self.time).\n You trained for \(durationText) hours"
         
