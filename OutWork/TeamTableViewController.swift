@@ -30,10 +30,7 @@ class TeamTableViewController: UITableViewController {
         let logo1 = UIImage(named: "Tiger")!
         let team1 = DisplayTeam(name: "Princeton", sport: "Men's Basketball", logo: logo1)
         
-        let logo2 = UIImage(named: "Tiger")!
-        let team2 = DisplayTeam(name: "Princeton", sport: "Men's Lacrosse", logo: logo2)
-        
-        teams += [team1, team2]
+        teams += [team1]
     }
     
     func joinOrCreate() {
