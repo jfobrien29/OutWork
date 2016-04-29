@@ -72,6 +72,22 @@ class TeamTableViewController: UITableViewController {
 
         return cell
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if indexPath.row == 1 {
+            performSegueWithIdentifier("JoinTeamSegue", sender: nil)
+        }
+        
+        if indexPath.row == 2 {
+            performSegueWithIdentifier("CreateTeamSegue", sender: nil)
+        }
+        
+        if indexPath.row == 0 {
+            performSegueWithIdentifier("MyTeamSegue", sender: nil)
+        }
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
