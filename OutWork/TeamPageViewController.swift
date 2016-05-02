@@ -40,7 +40,7 @@ class TeamPageViewController: UIViewController, UITableViewDelegate, UITableView
     func loadSampleWorkouts() {
         var sampleExercises = [true, true, false, true, false, false, false]
         
-        let workout1 = Workout(date: "Jack O'Brien", time: "4:00pm", duration: 2.1, comment: "N/A", exercises: sampleExercises)
+        let workout1 = Workout(date: "Matt O'Connor", time: "4:00pm", duration: 2.1, comment: "N/A", exercises: sampleExercises)
         
         sampleExercises[0] = false
         
@@ -58,7 +58,28 @@ class TeamPageViewController: UIViewController, UITableViewDelegate, UITableView
         
         print(workout4.toString())
         
-        workouts = [workout1, workout2, workout3, workout4]
+        let workout5 = Workout(date: "Austin DeButts", time: "2:40 pm", duration: 2.5, comment: "N/A", exercises: sampleExercises)
+        
+        let workout6 = Workout(date: "Austin Sims", time: "2:40 pm", duration: 4.2, comment: "N/A", exercises: sampleExercises)
+        
+        sampleExercises[1] = false;
+        
+        let workout7 = Workout(date: "Bobby Weaver", time: "2:30", duration: 1.6, comment: "N/A", exercises: sampleExercises)
+        
+        sampleExercises[1] = true;
+        sampleExercises[5] = false;
+        
+        let workout8 = Workout(date: "Ryan Ambler", time: "2:20", duration: 2.5, comment: "N/A", exercises: sampleExercises)
+        
+        sampleExercises[1] = false;
+        
+        let workout9 = Workout(date: "Gavin McBride", time: "2:40", duration: 2.3, comment: "N/A", exercises: sampleExercises)
+        
+        sampleExercises[0] = true;
+        
+        let workout10 = Workout(date: "Luke Brugger", time: "2:40", duration: 3.5, comment: "N/A", exercises: sampleExercises)
+        
+        workouts = [workout1, workout2, workout3, workout4, workout5, workout6, workout7, workout8, workout9,workout10]
     }
     
     // MARK: - Table view data source
