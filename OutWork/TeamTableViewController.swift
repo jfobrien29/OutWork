@@ -24,7 +24,7 @@ class TeamTableViewController: UITableViewController {
 
     func loadSampleTeams() {
         let logo1 = UIImage(named: "Tiger")!
-        let team1 = DisplayTeam(name: "Princeton", sport: "Men's Basketball", logo: logo1)
+        let team1 = DisplayTeam(name: "Princeton", sport: "Men's Lacrosse", logo: logo1)
         
         teams += [team1]
     }

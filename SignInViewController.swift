@@ -70,6 +70,7 @@ class SignInViewController: UIViewController {
     @IBAction func pressLogin(sender: UIButton) {
         let ref = Firebase(url: "https://outwork.firebaseio.com/users")
         
+        /*
         if EmailSignIn.text!.isEmpty || PasswordSignIn.text!.isEmpty || NameSignUp.text!.isEmpty
         {
             self.showAlert("Invalid Login", message: "You must fill out email, password, (and name for now) to login!", button: "dismiss")
@@ -86,10 +87,15 @@ class SignInViewController: UIViewController {
                 }
             }
         }
+        */
+        
+        currentUser = OWUser(name: "Jack", email: "jfobrien@princeton.edu", lastLogged: "Never Logged", UID:"Blah", workoutLog: [])
+        
+        self.performSegueWithIdentifier("SignInSegue", sender: nil)
     }
     
     func finishLogin(uid: String) {
-        currentUser = OWUser(name: self.NameSignUp.text!, email: self.EmailSignIn.text!, lastLogged: "Never Logged", UID:uid, workoutLog: [])
+        currentUser = OWUser(name: "Jack", email: "jfobrien@princeton.edu", lastLogged: "Never Logged", UID:uid, workoutLog: [])
         
         self.performSegueWithIdentifier("SignInSegue", sender: nil)
     }

@@ -8,10 +8,18 @@
 
 import UIKit
 
-class TeamPageViewController: UIViewController {
+class TeamPageViewController: UIViewController, UITableViewDelegate {
 
+    @IBOutlet weak var TopFiveField: UITextView!
+    @IBOutlet weak var BottomFiveField: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.TopFiveField.text = "Matt O'Connor \n 2)Ryan Ambler \n 3)Luke Brugger \n 4)Bobby Weaver \n 5)Austin DeButts"
+        
+        self.BottomFiveField.text = "Jack O'Brien \n 2)Riley Thompson \n 3)Dawson Mackenzie \n 4)Zach Currier \n 5)Mikey Macdonald"
 
         // Do any additional setup after loading the view.
     }
