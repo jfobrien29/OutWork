@@ -26,7 +26,7 @@ class TeamPageViewController: UIViewController, UITableViewDelegate, UITableView
         
         self.BottomFiveField.text = "1) Jack O'Brien\n2) Riley Thompson\n3) Dawson Mackenzie\n4) Zach Currier\n5) Mikey Macdonald"
         
-        //loadSampleWorkouts()
+        loadSampleWorkouts()
 
         // Do any additional setup after loading the view.
     }
@@ -38,7 +38,7 @@ class TeamPageViewController: UIViewController, UITableViewDelegate, UITableView
     
     // Function to Load Sample Data
     func loadSampleWorkouts() {
-        var sampleExercises = [true, true, false, true, false, false]
+        var sampleExercises = [true, true, false, true, false, false, false]
         
         let workout1 = Workout(date: "Jack O'Brien", time: "4:00pm", duration: 2.1, comment: "N/A", exercises: sampleExercises)
         
