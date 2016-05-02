@@ -84,7 +84,7 @@ class TeamTableViewController: UITableViewController {
         }
         
         if indexPath.row == 0 {
-            performSegueWithIdentifier("MyTeamSegue", sender: nil)
+            performSegueWithIdentifier("MyTeamsSegue", sender: nil)
         }
     }
     
